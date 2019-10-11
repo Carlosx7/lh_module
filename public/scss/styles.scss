@@ -1,0 +1,68 @@
+
+/*变量*/
+
+/*宽度*/
+$web-width:1400px;
+$nav-width:1001px;
+
+/*高度*/
+$header-height:495px;
+$banner-height:435px;
+$nav-height:60px;
+$nav-button-width:$nav-width/6;
+
+/*padding*/
+
+
+/*margin*/
+$center:0 auto;
+
+/*颜色*/
+$nav-color:#555555;
+$nav-text-color:white;
+
+
+
+
+/*背景图片*/
+$img-banner:url(../dist/img/banner.png);
+
+/*样式*/
+.test-color{background-color:turquoise;}
+
+header{
+    width: $web-width;
+    height: $header-height;
+    margin: $center;
+
+    .banner{
+        background:$img-banner no-repeat center center;
+        width: $web-width;
+        height: $banner-height;
+    }
+    nav{
+        width: $web-width;
+        height: $nav-height;
+        background-color: $nav-color;
+
+        ul{
+            width: $nav-width;
+            margin: $center;
+
+            li{
+                float:left;
+                height: $nav-height;
+                line-height: $nav-height;
+
+                a{
+                    display: block;
+                    color:$nav-text-color;
+                    font-size: 21px;
+                    width: $nav-button-width;
+                    height: $nav-height;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
