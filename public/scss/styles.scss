@@ -1,36 +1,149 @@
-
-/*变量*/
-
-/*宽度*/
-$web-width:1400px;
-$nav-width:1001px;
-
-/*高度*/
-$header-height:495px;
-$banner-height:435px;
-$nav-height:60px;
-$nav-button-width:$nav-width/6;
-
-/*padding*/
-
-
-/*margin*/
-$center:0 auto;
-
-/*颜色*/
-$nav-color:#555555;
-$nav-text-color:white;
-
-
-
-
-/*背景图片*/
-$img-banner:url(../dist/img/banner.png);
+@import "./variables.scss";
 
 /*样式*/
 .test-color{background-color:turquoise;}
+.hidden{display: none;}
+.w187{width: 187px;}
+.w122{width:122px;}
+.w250{width:250px;}
+.orange{background-color:$orange}
+.orange-light{background-color:$orange-light}
+.ml10{margin-left: 10px;}
+.mr5{margin-right: 5px;}
+.mt7{margin-top: 7px;}
+.fl{float: left;}
+.fr{float: right;}
 
-header{
+
+/*插件*/
+.dash a{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.center-margin{
+    margin:0 5px;
+}
+/* clearfix */
+.clearfix:after,
+.clearfix:before {
+	content: "";
+	display: block;
+	clear: both;
+	overflow: hidden;
+	visibility: hidden;
+	height: 0;
+}
+/*模块-新闻列表*/
+.news-list,.video-list{
+    li{
+        font-size: $fzlist;
+        padding-bottom: $pb30;
+        padding-left: $pl20;
+    }
+}
+.news-list{
+    li{
+        background: $dot no-repeat left 7px;
+    }
+}
+
+
+/*模块-按钮块*/
+.flex-button-group{
+    width: $flex-button-gruop-width;
+    height: $flex-button-gruop-height;
+    .flx-btn{
+        display: block;
+        height: $flx-btn-height;
+        float:$fl;
+        text-align: center;
+        line-height: $flx-btn-height;
+    }
+}
+/*模块-视频框*/
+.video-player{
+    width: $video-player-width;
+    height: $video-player-height;
+    margin-bottom: $mb10;
+}
+/*模块-视频列表*/
+.video-list{
+    margin-left: 80px;
+    li{
+        background: $video-icon no-repeat left 7px;
+    }
+}
+/*模块-more*/
+.video-more{
+    float:$fr;
+    width: 76px;
+    height: 17px;
+    margin-bottom: 5px;;
+}
+/*模块-主标题*/
+.title{
+    padding-left: $title-left-padding;
+    a{
+        font-size: $fztitle;
+        font-weight: bold;
+        color:$title-color;
+    }
+}
+/*模块-简介*/
+.info{
+    border-bottom: #adadad dotted 2px;
+    margin-bottom: $mb30;
+    padding: 25px 0;
+    p{
+        font-size: $fzinfo;
+        line-height: 30px;
+        display: inline;
+        text-indent: 2em;
+    }
+    p,a{
+    color:$info-color;
+    }
+}
+/*模块-图片标题简介块*/
+.info-with-img{
+    width: $info-with-img-width;
+    height: $info-with-img-height;
+    background-color:$info-with-img-bgColor;
+    margin-bottom: $mt10;
+    img{
+        width:$info-with-img-imageWidth;
+        height: $info-with-img-imageHeight;
+        margin: 5px 20px 5px 5px;
+    }
+    .info-with-img-title{
+        font-size: $fz-info-with-img-title;
+        display: block;
+        padding:20px 10px 15px 0;
+    }
+    section{
+        width:235px;
+        float: left;
+        p,.info-with-img-detail{
+            font-size: $fz-info-with-img-info;
+            color: $info-with-img-text-color;
+            line-height: 24px;
+            display: inline;
+        }
+    }
+        
+    
+    
+}
+
+/*基本*/
+a{
+    text-decoration: none;
+    color: $list-color;
+}
+
+header,.page-header{
     width: $web-width;
     height: $header-height;
     margin: $center;
@@ -43,8 +156,7 @@ header{
     nav{
         width: $web-width;
         height: $nav-height;
-        background-color: $nav-color;
-
+        background: radial-gradient(at 50% -60%, rgb(255,227,173),rgb(255,223,165), #ff9e32);
         ul{
             width: $nav-width;
             margin: $center;
@@ -57,12 +169,106 @@ header{
                 a{
                     display: block;
                     color:$nav-text-color;
-                    font-size: 21px;
+                    font-size: 18px;
                     width: $nav-button-width;
                     height: $nav-height;
                     text-align: center;
+                    font-family: "kaiti";
+                    color: #9b6645;
+                    font-weight: bolder;
                 }
             }
         }
     }
 }
+.page-header{
+    height: $page-header-height;
+    .banner{
+        background:$page-header no-repeat center center;
+        width: $web-width;
+        height: $page-header-banner-height;
+    }
+}
+/*Content1*/
+.content1{
+    width: $content-width;
+    height: $content1-height;
+    margin: $center;
+    .title1{
+        width:$content-width;
+        height: $title1-height;
+        background: $title1-bgimg no-repeat center center;
+    }
+    .section1-left{
+        float:$fl;
+        margin-top: $mt30;
+        width:$section1-left-width;
+    }
+    .section1-right{
+        margin-top: $mt30;
+        float: $fr;
+        width: $section1-right-width;
+    }
+}
+
+/*content2*/
+.content2{
+    width: $content-width;
+    height: $content2-height;
+    margin: $center;
+    .title2{
+        width:$content-width;
+        height: $title2-height;
+        background: $title2-bgimg no-repeat center center;
+    }
+    .section2-left{
+        float:$fl;
+        margin-top: $mt10;
+        width:$section2-left-width;
+    }
+    .section2-right{
+        margin-top: $mt30;
+        float: $fr;
+        width: $section2-right-width;
+    }
+}
+/*content3*/
+.content3{
+    width: $content-width;
+    height: $content3-height;
+    margin: $center;
+    .title3{
+        width:$content-width;
+        height: $title3-height;
+        background: $title3-bgimg no-repeat center center;
+    }
+    .section3-left{
+        float:$fl;
+        margin-top: $mt10;
+        width:$section3-left-width;
+    }
+    .section3-right{
+        margin-top: $mt30;
+        float: $fr;
+        width: $section3-right-width;
+    }
+}
+/*content4*/
+.content4{
+    width: $content-width+3px;
+    height: $content4-height;
+    margin: $center;
+    .title4{
+        width:$content-width;
+        margin: $center;
+        height: $title3-height;
+        background: $title4-bgimg no-repeat center center;
+    }
+}
+.footer{
+    width: $web-width;
+    height: $content4-height;
+    margin: $center;
+    background: $foot-bg no-repeat center center;
+}
+

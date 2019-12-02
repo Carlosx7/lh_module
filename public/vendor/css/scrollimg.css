@@ -1,0 +1,102 @@
+.scrollImg {
+	position: relative;
+	width: 526px;
+	height: 292px;
+	overflow: hidden;
+}
+
+.scrollImg img {
+	width: 526px;
+	height: 292px;
+}
+
+#bd1lfimg {
+	position: relative;
+	width: 526px;
+	height: 292px;
+	overflow: hidden;
+}
+
+#bd1lfimg div {
+	width: 100000px;
+	margin-left: -4px;
+}
+
+#bd1lfimg dl {
+	position: relative;
+	width: 526px;
+	height: 292px;
+	overflow: hidden;
+	float: left;
+}
+
+#bd1lfimg dt {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#bd1lfimg dd {
+	width: 526px;
+	height: 25px;
+	line-height: 25px;
+	padding: 8px 0 4px 15px;
+	overflow: hidden;
+	background: #000000;
+	filter: alpha(Opacity=70);
+	Opacity: 0.7;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+#bd1lfimg dd a {
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffffff;
+	position: relative;
+	z-index: 100;
+}
+
+#bd1lfimg dd a:hover {
+	color: #cccccc;
+}
+
+.sub_nav {
+	width: 60px;
+	height: 18px;
+	right: 0;
+	bottom: 3px;
+	position: absolute;
+	color: #999999;
+	z-index: 200;
+}
+
+.sub_no {
+	height: 10px;
+}
+
+.sub_no li {
+	display: block;
+	width: 10px;
+	height: 10px;
+	line-height: 20px;
+	float: left;
+	overflow: hidden;
+	vertical-align: middle;
+	text-align: center;
+	filter: alpha(Opacity=90);
+	Opacity: 0.9;
+	font-family: Arial;
+	font-size: 11px;
+	cursor: pointer;
+	margin: 0 2px;
+	background: #ffffff;
+	color: #000000;
+	border-radius: 50%;
+}
+
+.sub_no li.show {
+	color: #fff;
+	background: #F30;
+}
